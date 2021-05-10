@@ -3,7 +3,7 @@
 #' @import raster
 #' @param sdm ENM suitability prediction
 #' @param occ Occ of long and lat
-#' @param type mtp,p10
+#' @param type mtp, p5, p10
 thd <- function(sdm, occ, type = ""){
   occPredVals <- raster::extract(sdm, occ)
   if(type == "mtp"){
