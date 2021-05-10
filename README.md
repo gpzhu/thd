@@ -1,5 +1,5 @@
 
-# This package is used to transform suitability prediction into binary prediction.
+# This small package is used to transform suitability prediction into binary prediction.
 
 #library(devtools)
 
