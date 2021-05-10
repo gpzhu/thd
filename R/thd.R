@@ -4,7 +4,6 @@
 #' @param sdm ENM suitability prediction
 #' @param occ Occ of long and lat
 #' @param type mtp,p10
-
 thd <- function(sdm, occ, type = ""){
   occPredVals <- raster::extract(sdm, occ)
   if(type == "mtp"){
@@ -17,9 +16,19 @@ thd <- function(sdm, occ, type = ""){
     }
     thresh <- rev(sort(occPredVals))[p10]
   }
+  
+  else if(type == "p5"){
+    if(length(occPredVals) < 5){
+      p5 <- floor(length(occPredVals) * 0.95)
+    } else {
+      p5 <- ceiling(length(occPredVals) * 0.95)
+    }
+    thresh <- rev(sort(occPredVals))[p5]
+  }
   sdm_thresh <- sdm
   sdm_thresh[sdm_thresh < thresh] <- NA
   sdm_thresh[sdm_thresh >= thresh] <- 1
   return(sdm_thresh)
 }
+
 
