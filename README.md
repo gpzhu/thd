@@ -3,7 +3,7 @@ This small package is used to transform suitability prediction into binary predi
 
 library(devtools)
 
-install_github('Gengping-Zhu/thd')
+install_github('gpzhu/thd')
 
 library(thd)
 
