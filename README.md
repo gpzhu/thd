@@ -1,5 +1,5 @@
 
-This small package is used to transform suitability prediction into binary prediction.
+# This small package is used to transform ENM suitability prediction into binary prediction.
 
 library(devtools)
 
@@ -7,7 +7,10 @@ install_github('gpzhu/thd')
 
 library(thd)
 
-Pred_thd<-thd(sdm=r, occ=aa, type = "p5")
 
-#sdm is the suitability prediction, occ is the long and lat of testing occurrence data, threshold type can be mtp, p10 and p5
+#Example, 'sdm' is the suitability prediction, 
+#occ is the long and lat of testing occurrence data, 
+#threshold type can be mtp (minimum training threshold), p10 (10th training threshold) or p5 (5th traning threshold)
+
+Pred_thd<-thd(sdm=r, occ=aa, type = "p5")
 
