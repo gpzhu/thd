@@ -8,7 +8,7 @@ install_github('gpzhu/thd')
 library(thd)
 
 
-#Example, 'sdm' is the ENM suitability prediction;
+Example: 'sdm' is the ENM suitability prediction;
 #occ is the long and lat of testing occurrence data;
 #threshold type can be mtp (minimum training threshold), p10 (10th training threshold) or p5 (5th traning threshold)
 
